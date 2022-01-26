@@ -1,0 +1,92 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    }
+    
+
+
+@font-face {
+    font-family: get-schwifty;
+    src: url(/public/Fonts/get-schwifty.ttf);
+}
+
+@font-face {
+    font-family: shlop;
+    src: url(/public/Fonts/shlop.ttf);
+}
+
+@font-face {
+    font-family: erasdust;
+    src: url(/public/Fonts/erasdust.ttf);
+}
+
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+    text-align: center;
+    color: white;
+    background-color: black;
+    /*background-image: url("https://www.whatspaper.com/wp-content/uploads/2021/09/hd-rick-and-morty-wallpaper-whatspaper.png");
+*/
+}
+
+h1 {
+    font-family: get-schwifty;
+    font-size: 7vw;
+    padding-top: 4vw;
+    padding-bottom: 1vw;
+    color: RGB(68, 180, 200);
+    text-shadow: 0 0 5px RGB(173, 218, 42), 0 0 5px RGB(173, 218, 42),
+    0 0 5px RGB(173, 218, 42), 0 0 5px #49ff18, 0 0 5px #49ff18, 0 0 5px #49ff18,
+    0 0 5px #49ff18, 0 0 5px #49ff18;
+}
+
+h2 {
+    text-align: center;
+    font-family: shlop;
+    font-size: 6vw;
+    color: RGB(68, 180, 200);
+    text-shadow: 0 0 5px RGB(173, 218, 42), 0 0 5px RGB(173, 218, 42),
+    0 0 5px RGB(173, 218, 42), 0 0 5px #49ff18, 0 0 5px #49ff18, 0 0 5px #49ff18,
+    0 0 5px #49ff18, 0 0 5px #49ff18;
+}
+
+p {
+    font-family: erasdust;
+    font-size: 2.2vw;
+}
+
+.mainText {
+    padding: 1vw 5vw 5vw 5vw;
+}
+
+.text1 {
+    padding: 1vw 5vw 3vw 5vw;
+}
+
+.text2 {
+    padding: 1vw 5vw 3vw 5vw;
+}
+
+.imgContent {
+    width: 35vw;
+}
+
+.imgContent2 {
+    width: 35vw;
+    padding: 6vw 6vw 8vw 8vw;
+}
+
+.imgContent3 {
+    width: 35vw;
+    height: 50vw;
+    padding: 4vw 8vw 3vw 10vw;
+}

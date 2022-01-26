@@ -1,0 +1,29 @@
+@font-face {
+    font-family: shlop;
+    src: url(/public/Fonts/shlop.ttf);
+}
+
+header {
+    align-items: center;
+    background-color: black;
+    display: flex;
+    justify-content: space-evenly;
+    height: 10vw;
+    width: 100vw;
+    }
+
+ul {
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    align-items: center;
+    width: 35vw;
+}
+
+li a {
+    text-decoration: none;
+    font-size: 3vw;
+    font-weight: bold;
+    color: antiquewhite;
+    font-family: shlop;
+}
