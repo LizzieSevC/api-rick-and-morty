@@ -12,8 +12,8 @@ const [info, setInfo]= useState([]);
 const url = "https://rickandmortyapi.com/api/character";
 
 const fetchApi = async (url) => {
-    const res = await fetch (url);
-    const characterJSON = await res.json();
+    const res = await fetch (url); /* response */
+    const characterJSON = await res.json(); /* .json make it a json */
     const { results, info } = await characterJSON;
     setCharacters(results);
     setInfo(info);
@@ -53,6 +53,7 @@ useEffect(() =>{
 
     return(
         <div className='containerMain'>
+            <div className='buttons'>
         <Button name='Prev' onChange={onPrev} page={info.prev}/>
         <Button name='Next' onChange={onNext} page={info.next}/>
         <Button name='Female' onChange={onFemale} page={true}/>
@@ -60,6 +61,7 @@ useEffect(() =>{
         <Button name='Unknown' onChange={onUnknown} page={true}/>
         <Button name='Genderless' onChange={onGenderless} page={true}/>
         <Button name='Clean filters' onChange={noFilter} page={true}/>
+        </div>
             {characters.map(
                 (character) => (
             <Character

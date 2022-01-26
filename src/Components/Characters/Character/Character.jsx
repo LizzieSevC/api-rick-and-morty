@@ -7,7 +7,7 @@ const { avatar, name, status, species, gender, origin } = props;
 return (
     <div className="characterCard">
     <div className="characterImg">
-        <img src={avatar} alt="{'image' +name}" />
+        <img src={avatar} alt="{name}" />
     </div>
 
     <div className="characterInfo">
@@ -20,3 +20,4 @@ return (
     </div>
     );
 }
+

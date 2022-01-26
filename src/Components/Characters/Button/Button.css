@@ -5,5 +5,15 @@ button{
     padding: 1vw;
     border-radius: 8px;
     padding: 10px;
+    margin: 2vw;
 }
+
+.buttons{
+    margin: 25px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+
 

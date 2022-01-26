@@ -9,5 +9,5 @@ export function Button(props){
         </>
     );
 }
-        { /* Ternary operator. ? = if, si hay algo o no. : = if false, then */}
+/* Ternary operator. ? = if, si hay algo o no. : = if false, then */
         
