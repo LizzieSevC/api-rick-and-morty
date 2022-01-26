@@ -17,7 +17,6 @@ const fetchApi = async (url) => {
     setInfo(info);
 }
 
-
 useEffect(() =>{
     fetchApi(url)
     }, [])
