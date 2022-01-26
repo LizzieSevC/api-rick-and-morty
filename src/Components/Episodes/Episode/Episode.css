@@ -1,0 +1,4 @@
+.episodeCard{
+    display: flex;
+    flex-wrap: wrap;
+}

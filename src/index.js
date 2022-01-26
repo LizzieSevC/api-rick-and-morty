@@ -9,7 +9,7 @@ import {Episodes} from './Components/Episodes/Episodes';
 
 ReactDOM.render(
   <BrowserRouter>
-    <Routes>
+    <Routes> {/*  */}
       <Route path='/' element={<NavBar/>}>
         <Route path='/' element={<Home/>} />
         <Route path='/Characters' element={<Characters/>} />

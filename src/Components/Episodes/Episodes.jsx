@@ -1,39 +1,37 @@
-import react from "react";
-import {Episode} from "./Episode/Episode"
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
+import { Episode } from "./Episode/Episode";
+import "./Episodes.css";
 
-export function Episodes(){
+export function Episodes() {
+    const [episodes, setEpisodes] = useState([]);
+    const [info, setInfo] = useState([]);
 
-const [episodes, setEpisodes] = useState([]);
-const [info, setInfo]= useState([]);
+    const url = "https://rickandmortyapi.com/api/episode/";
 
-const url = "https://rickandmortyapi.com/api/episode";
-
-const fetchApi = async (url) => {
-    const res = await fetch (url);
-    const episodeJSON = await res.json();
-    const { results, info } = await episodeJSON;
-    setEpisodes(results);
+    const fetchApi = async (url) => {
+    const res = await fetch(url);
+    const episodesJSON = await res.json();
+    const { results, info } = await episodesJSON;
     setInfo(info);
-}
+    setEpisodes(results);
+    };
+    useEffect(() => {
+    fetchApi(url);
+    }, []);
 
-useEffect(() =>{
-    fetchApi(url)
-    }, [])
-
-    return(
-        <div>
-            {episodes.map(
-                (episode) => (
-            <Episode
+    return (
+    <article id="articleEpisodes">
+    <div className="episode">
+        {episodes.map((episode) => (
+        <Episode
             key={episode.id}
             name={episode.name}
-            air_date={episode.air_date}
-            status= {episode.episode}
-            />
+            airDate={episode.air_date}
+            episode={episode.episode}
+            charactersList={episode.characters}
+        />
         ))}
         </div>
+    </article>
     );
-
-;
 }

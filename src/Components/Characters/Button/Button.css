@@ -1,4 +1,9 @@
-
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    }
+    
 button{
     background-color: black;
     color: white;
@@ -8,12 +13,16 @@ button{
     margin: 2vw;
 }
 
-.buttons{
-    margin: 25px;
+.container_cards{
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
+    background: rgb(255,255,255);
+    background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(73,255,24,1) 25%, rgba(255,255,255,1) 50%, rgba(73,255,24,1) 75%, rgba(255,255,255,1) 100%);
 }
 
-
-
+button:hover{
+    border-radius: 10px;
+    cursor: pointer;
+    border-color: yellowgreen;
+}

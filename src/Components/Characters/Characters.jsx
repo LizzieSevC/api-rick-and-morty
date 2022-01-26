@@ -6,7 +6,7 @@ import { Button } from './Button/Button';
 
 
 export function Characters() {
-const [ characters, setCharacters ] = useState([]);
+const [ characters, setCharacters ] = useState([]); /* 2 values, current and fx that updates it */
 const [info, setInfo]= useState([]);
 
 const url = "https://rickandmortyapi.com/api/character";
@@ -52,8 +52,7 @@ useEffect(() =>{
     }, [])
 
     return(
-        <div className='containerMain'>
-            <div className='buttons'>
+        <div className='container_cards'>
         <Button name='Prev' onChange={onPrev} page={info.prev}/>
         <Button name='Next' onChange={onNext} page={info.next}/>
         <Button name='Female' onChange={onFemale} page={true}/>
@@ -61,7 +60,6 @@ useEffect(() =>{
         <Button name='Unknown' onChange={onUnknown} page={true}/>
         <Button name='Genderless' onChange={onGenderless} page={true}/>
         <Button name='Clean filters' onChange={noFilter} page={true}/>
-        </div>
             {characters.map(
                 (character) => (
             <Character
