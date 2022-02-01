@@ -4,7 +4,7 @@ import "./Episode.css";
 export function Episode(props) {
     const { name, airDate, episode, charactersList } = props;
     const [character, setCharacter] = useState([{}]);
-    useEffect(async () => {
+    useEffect( () => {
     charactersList.map(async (items) => {
     const res = await fetch(items);
     const characterJSON = await res.json();
