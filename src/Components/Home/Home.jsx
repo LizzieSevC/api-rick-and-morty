@@ -5,7 +5,7 @@ import './Home.css';
 export function Home() {
   return (
     <div className="container">
-      <h1>Rick and Morty</h1>
+      <h1 className="title">Rick and Morty</h1>
       <img className="imgContent" src="/Images/imgcontent.png" alt="Img1" />
       <p className="mainText">
         Rick and Morty is an American adult animated science fiction sitcom

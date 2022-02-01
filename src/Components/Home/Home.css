@@ -38,11 +38,11 @@ body {
 */
 }
 
-h1 {
+.title {
     font-family: get-schwifty;
     font-size: 7vw;
     padding-top: 4vw;
-    padding-bottom: 1vw;
+    padding-bottom: 3vw;
     color: RGB(68, 180, 200);
     text-shadow: 0 0 5px RGB(173, 218, 42), 0 0 5px RGB(173, 218, 42),
     0 0 5px RGB(173, 218, 42), 0 0 5px #49ff18, 0 0 5px #49ff18, 0 0 5px #49ff18,

@@ -17,7 +17,7 @@ ul {
     list-style: none;
     justify-content: space-around;
     align-items: center;
-    width: 35vw;
+    width: 40vw;
 }
 
 li a {
@@ -26,4 +26,10 @@ li a {
     font-weight: bold;
     color: antiquewhite;
     font-family: shlop;
+}
+
+li a:hover{ 
+    text-shadow: 0 0 5px black, 0 0 5px RGB(173, 218, 42),
+    0 0 5px RGB(173, 218, 42), 0 0 5px #49ff18, 0 0 5px #49ff18, 0 0 5px #49ff18;
+    font-size: 3.5vw;
 }

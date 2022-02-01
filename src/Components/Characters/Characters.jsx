@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
 import { Character } from './Character/Character';
-import { Button } from './Button/Button';
+import { Button } from '../Button/Button';
 /* import {characterList} from './CharacterList' */
 
 
@@ -14,7 +14,7 @@ const url = "https://rickandmortyapi.com/api/character";
 const fetchApi = async (url) => {
     const res = await fetch (url); /* response */
     const characterJSON = await res.json(); /* .json make it a json */
-    const { results, info } = await characterJSON;
+    const { results, info } = await characterJSON; /* the two blocks of info from the API are saved on results, info */
     setCharacters(results);
     setInfo(info);
 }
@@ -47,12 +47,15 @@ const noFilter = () =>{
     fetchApi("https://rickandmortyapi.com/api/character/")
 }
 
-useEffect(() =>{
+useEffect(() =>{ /* used with APIs, 
+    renders for the first time and every time is refreshed, 
+    takes a function as it's argument */
     fetchApi(url)
-    }, [])
+    }, []) /* empty, only one time render from the API */
 
     return(
-        <div className='container_cards'>
+<>
+<div className='containerButtons'>
         <Button name='Prev' onChange={onPrev} page={info.prev}/>
         <Button name='Next' onChange={onNext} page={info.next}/>
         <Button name='Female' onChange={onFemale} page={true}/>
@@ -60,9 +63,12 @@ useEffect(() =>{
         <Button name='Unknown' onChange={onUnknown} page={true}/>
         <Button name='Genderless' onChange={onGenderless} page={true}/>
         <Button name='Clean filters' onChange={noFilter} page={true}/>
+</div>
+
+        <div className='container_cards'>        
             {characters.map(
                 (character) => (
-            <Character
+            <Character /* *materializa* creates a tag so we can show the info */
             key={character.id}
             name={character.name}
             avatar={character.image}
@@ -72,7 +78,14 @@ useEffect(() =>{
             origin={character.origin.name}
             />
         ))}
+        </div>        
+
+        <div className='containerButtons'>
+            <Button name='Prev' onChange={onPrev} page={info.prev}/>
+            <Button name='Next' onChange={onNext} page={info.next}/>
+
         </div>
+        </>
     );
 }
 

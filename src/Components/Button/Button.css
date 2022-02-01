@@ -6,6 +6,8 @@
     
 button{
     background-color: black;
+    font-family: erasdust;
+    font-size: 3vw;
     color: white;
     padding: 1vw;
     border-radius: 8px;
@@ -13,16 +15,15 @@ button{
     margin: 2vw;
 }
 
-.container_cards{
+.containerButtons{
     display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    background: rgb(255,255,255);
-    background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(73,255,24,1) 25%, rgba(255,255,255,1) 50%, rgba(73,255,24,1) 75%, rgba(255,255,255,1) 100%);
+    justify-content: space-around;
+    align-items: center;
 }
 
 button:hover{
     border-radius: 10px;
     cursor: pointer;
     border-color: yellowgreen;
+    border-width: 2px;
 }

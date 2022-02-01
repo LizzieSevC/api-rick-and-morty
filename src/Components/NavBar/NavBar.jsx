@@ -14,7 +14,7 @@ export function NavBar() {
     </ul>
   </header>
     <div>
-    <Outlet/> {/* renders the routes and it's childrens */}
+    <Outlet/> {/* structure! renders the routes and it's childrens */}
     </div>
     </>
 );

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Episode } from "./Episode/Episode";
 import "./Episodes.css";
+import { Button } from '../Button/Button';
 
 export function Episodes() {
     const [episodes, setEpisodes] = useState([]);
@@ -18,20 +19,35 @@ export function Episodes() {
     useEffect(() => {
     fetchApi(url);
     }, []);
-
+    
+    const onNext = () =>{
+        fetchApi(info.next)
+    }
+    const onPrev = () =>{
+        fetchApi(info.prev)
+    }
     return (
-    <article id="articleEpisodes">
-    <div className="episode">
+        <>
+    <div className="containerButtons">
+        <Button name='Prev' onChange={onPrev} page={info.prev}/>
+        <Button name='Next' onChange={onNext} page={info.next}/>
+    </div>
+    <div className="container_episodes">
         {episodes.map((episode) => (
-        <Episode
+            <Episode
             key={episode.id}
             name={episode.name}
             airDate={episode.air_date}
             episode={episode.episode}
             charactersList={episode.characters}
-        />
+        /> 
         ))}
-        </div>
-    </article>
+    </div>
+
+    <div className="containerButtons">
+        <Button name='Prev' onChange={onPrev} page={info.prev}/>
+        <Button name='Next' onChange={onNext} page={info.next}/>
+    </div>
+    </>
     );
 }
